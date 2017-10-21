@@ -1,0 +1,75 @@
+[← back to *Main Page*](https://github.com/logsigma/Hadoop/blob/master/Readme.md)
+
+# 2.Hadoop Install
+
+
+## Java openJDK 7 Install
+```sh
+sudo apt-get update
+sudo apt-get instaal openjdk-7-jdk
+sudo update-alternatives --config java
+javac -version
+```
+
+## Setup SSH Server
+```sh
+sudo apt-get install openssh-server
+
+ssh-keygen -t rsa -P ""
+cat ~/.ssh/in_rsa.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+sudo chown -R [username]:[username] ~/.ssh
+```
+
+## Copy NameNode SSH to DateNode SSH
+```sh
+sudo scp -r ~/.ssh [username]@master2:~/.ssh
+sudo scp -r ~/.ssh [username]@slave1:~/.ssh
+sudo scp -r ~/.ssh [username]@slave2:~/.ssh
+sudo scp -r ~/.ssh [username]@slave3:~/.ssh
+```
+
+## Install Hadoop Distribution
+```sh
+cd /usr/localwget http://www.us.apache.org/dist/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
+tar -xzf hadoop-2.7.2.tar.gz
+mv hadoop-2.7.2 hadoop
+mkdir -p /usr/local/hadoop/hdfs/namenode
+mkdir -p /usr/local/hadoop/hdfs/namesecondary
+mkdir -p /usr/local/hadoop/hdfs/datanode
+mkdir -p /usr/local/haddop/tmp
+```
+
+## Bashrc Setup Environment
+```sh
+sudo vi ~/.bashrc
+```
+```sh
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/binexport HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/lib/*:.
+export HADOOP_CLASSPATH=$HADOOP_HOME/etc/hadoop
+```
+```sh
+source ~/.bashrc
+```
+
+## Copy NameNode Bashrc to DateNode Bashrc
+```sh
+sudo scp -r ~/.bashrc [username]@master2:~/.bashrc
+sudo scp -r ~/.bashrc [username]@slave1:~/.bashrc
+sudo scp -r ~/.bashrc [username]@slave2:~/.bashrc
+sudo scp -r ~/.bashrc [username]@slave3:~/.bashrc
+```
+
+[← back to *Main Page*](https://github.com/logsigma/Hadoop/blob/master/Readme.md)
