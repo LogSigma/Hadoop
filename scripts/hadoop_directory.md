@@ -1,4 +1,4 @@
-[← back to *Main Page*](https://github.com/logsigma/Hadoop/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
 
 
 # Hadoop Directory Management
@@ -18,4 +18,4 @@ sudo chown -R [usrname]:[usrname] /usr/local/hadoop_log
 sudo chown -R [usrname]:[usrname] /usr/local/hadoop_var
 ```
 
-[← back to *Main Page*](https://github.com/logsigma/Hadoop/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
