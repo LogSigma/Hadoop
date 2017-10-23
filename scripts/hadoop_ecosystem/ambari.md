@@ -1,4 +1,4 @@
-[← back to *Main Page*](https://github.com/logsigma/Hadoop/blob/master/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
 
 # Ambari Install
 * The ambari repository must be installed on the host.
@@ -77,3 +77,5 @@ sudo ambari-server start
 ```sh
 sudo ambari-server stop
 ```
+
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
