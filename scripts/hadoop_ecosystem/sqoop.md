@@ -1,4 +1,4 @@
-[← back to *Main Page*](https://github.com/logsigma/Hadoop/blob/master/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
 
 # Sqoop Install
 
@@ -53,3 +53,5 @@ cd $SQOOP_HOME/libs
 wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.28.tar.gz
 tar zxf mysql-connector-java-5.1.28.tar.gz
 ```
+
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
