@@ -1,4 +1,4 @@
-[← back to *Main Page*](https://github.com/logsigma/Hadoop/blob/master/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
 
 # Zookeeper Install
 
@@ -106,4 +106,4 @@ jps
 zkServer.sh stop
 ```
 
-[← back to *Main Page*](https://github.com/zyskuuk/Hadoop/blob/master/Readme.md)
+[← back to *Main Page*](https://github.com/LogSigma/Hadoop/blob/master/README.md)
